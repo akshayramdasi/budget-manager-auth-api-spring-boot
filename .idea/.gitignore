@@ -1,0 +1,58 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# ----------------------------------------------------------------------
+# Build/Target Directories & Artifacts
+# ----------------------------------------------------------------------
+/target/
+/build/
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.log
+
+# ----------------------------------------------------------------------
+# IDE - IntelliJ, Eclipse, VSCode
+# ----------------------------------------------------------------------
+# IntelliJ IDEA
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+/.classpath
+/.project
+/.settings/
+/bin/
+
+# VS Code (uncomment if you don't share configs)
+# .vscode/
+
+# ----------------------------------------------------------------------
+# OS generated files
+# ----------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------------------------------------------------
+# Local/Sensitive Configuration
+# ----------------------------------------------------------------------
+# Ignore sensitive or local-only configurations
+application-local.properties
+application-dev.yml
+secrets.properties
+*credentials*
+*private-key*
+
+# ----------------------------------------------------------------------
+# Maven/Gradle Specifics
+# ----------------------------------------------------------------------
+# Maven
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+!/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
