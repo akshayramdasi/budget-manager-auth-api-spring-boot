@@ -1,8 +1,10 @@
 package com.example.demo.service;
 
 import com.example.demo.model.UserModel;
+import com.example.demo.model.dto.RegisterRequest;
 import com.example.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Request;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
@@ -13,8 +15,11 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public UserModel register(UserModel user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+    public UserModel register(RegisterRequest request){
+        UserModel user = new UserModel();
+        user.setName(request.getName());
+        user.setEmail(request.getEmail());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
         return userRepository.save(user);
     }
 
