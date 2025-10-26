@@ -31,4 +31,32 @@ public class JwtService {
                 .getBody()
                 .getSubject();
     }
+    // New method: Validate token
+    public boolean isTokenValid(String token, String username) {
+        try {
+            // Extract username from token
+            String tokenUsername = extractUsername(token);
+
+            // Check if username matches and token is not expired
+            return tokenUsername.equals(username) && !isTokenExpired(token);
+        } catch (Exception e) {
+            // If any exception occurs (malformed, signature invalid, etc.), token is invalid
+            return false;
+        }
+    }
+
+    // Helper method: Check if token is expired
+    private boolean isTokenExpired(String token) {
+        return extractExpiration(token).before(new Date());
+    }
+
+    // Helper method: Extract expiration date from token
+    private Date extractExpiration(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(getSignKey())
+                .build()
+                .parseClaimsJws(token)
+                .getBody()
+                .getExpiration();
+    }
 }

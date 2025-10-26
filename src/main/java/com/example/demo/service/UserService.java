@@ -1,10 +1,9 @@
 package com.example.demo.service;
 
 import com.example.demo.model.UserModel;
-import com.example.demo.model.dto.RegisterRequest;
+import com.example.demo.model.dto.RegisterUserRequest;
 import com.example.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Request;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
@@ -15,7 +14,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public UserModel register(RegisterRequest request){
+    public UserModel register(RegisterUserRequest request){
         UserModel user = new UserModel();
         user.setName(request.getName());
         user.setEmail(request.getEmail());
