@@ -1,0 +1,138 @@
+# =========
+# Operating System
+# =========
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+._*
+
+# Linux trash folder which might appear on some systems
+.Trash-*
+
+# =========
+# IDEs / editors
+# =========
+# IntelliJ IDEA / JetBrains
+/.idea/
+/*.iml
+*.iws
+/.cache/
+/out/
+
+# VS Code settings
+.vscode/
+
+# Eclipse
+.project
+.settings/
+.classpath
+.caches/
+
+# =========
+# Build / dependency directories
+# =========
+# Maven
+/target/
+/build/
+!*/src/main/**/target/      # if multi-module may need adjustment
+
+# Gradle (if you ever use Gradle)
+/.gradle/
+/build/
+
+# =========
+# Logs and runtime files
+# =========
+*.log
+logs/
+*.pid
+*.seed
+
+# =========
+# Environment / local configs
+# =========
+*.env
+.env.*
+/config/application-*.yml      # local overrides if you use profiles
+/config/application-*.properties
+
+# =========
+# Generated files / caches
+# =========
+# For Spring Boot executable jar
+*.jar
+*.war
+*.ear
+
+# If using Spring Boot layering or expanded structure
+BOOT-INF/
+META-INF/
+
+# For annotation processors
+/generated-sources/
+/generated/
+
+# =========
+# OS / tool specific
+# =========
+# Crash dumps / error reports
+hs_err_pid*
+
+# Maven wrapper files (these you usually keep, but if you generate other wrappers)
+/mvnw
+/mvnw.cmd
+/.mvn/wrapper/*
+
+# =========
+# Miscellaneous
+# =========
+# If you commit build artifacts like JARs accidentally
+*.class
+*.jar.original
+*.tmp
+
+# Archive files you might drop locally
+*.zip
+*.tar
+*.gz
+
+# =========
+# Docker / container
+# =========
+docker-compose.override.yml
+docker-compose.local.yml
+.envrc
+
+# =========
+# Deployment / CI
+# =========
+# Files produced by CI/CD that should not go into version control
+/deploy/
+ci-output/
+coverage-report/
+
+# =========
+# Secrets / keys
+# =========
+*.jks
+*.keystore
+keys/
+.private/
+
+# =========
+# If using micro-services / multi-module / frontends
+# =========
+node_modules/
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+dist/
+build/
+
+# =========
+# End
+# =========
